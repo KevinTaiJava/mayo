@@ -67,7 +67,7 @@ public class MobFactory {
 		fileLocations.add("pics/sprites/Bat.png");
 		fileLocations.add("pics/sprites/Bat2.png");
 		
-		Mob bat = new Mob(world, fileLocations, null, 15, 5, 0, 10, "Bat");
+		Mob bat = new Mob(world, fileLocations, null, 15, 5, 10, 10, "Bat");
 		world.addAtEmptyLocation(bat, z);
 		new BatAi(bat, world);
 		return bat; 	
