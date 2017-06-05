@@ -23,7 +23,7 @@ public class MobFactory {
 		leftFileLocations.add("pics/sprites/minerleftframe1-3.png");
 		leftFileLocations.add("pics/sprites/minerleftframe4.png");
 		
-		Mob player = new Mob(world, fileLocations, leftFileLocations, 100, 10, 10, 5,  "Hero");
+		Mob player = new Mob(world, fileLocations, leftFileLocations, 100, 15, 15, 5,  "Hero");
 		world.addAtEmptyLocation(player, 0);
 		new PlayerAi(player, messages, world);
 		return player;
@@ -56,7 +56,7 @@ public class MobFactory {
 		fileLocations.add("pics/sprites/trollframe1.png");
 		fileLocations.add("pics/sprites/trollframe2.png");
 		
-		Mob troll = new Mob(world, fileLocations, null, 50, 15, 15, 10, "Troll");
+		Mob troll = new Mob(world, fileLocations, null, 50, 17, 10, 10, "Troll");
 		world.addAtEmptyLocation(troll, z);
 		new TrollAi(troll, world);
 		return troll; 
@@ -82,7 +82,7 @@ public class MobFactory {
 		leftFileLocations.add("pics/sprites/bloodshotleftframe1.png");
 		leftFileLocations.add("pics/sprites/bloodshotleftframe2.png");
 		
-		Mob eye = new Mob(world, fileLocations, leftFileLocations, 40, 20, 15, 5,  "Bloodshot");
+		Mob eye = new Mob(world, fileLocations, leftFileLocations, 45, 22, 15, 5,  "Bloodshot");
 		world.addAtEmptyLocation(eye, z);
 		new EyeAi(eye, world);
 		return eye; 	
@@ -97,7 +97,7 @@ public class MobFactory {
 		fileLocations.add("pics/sprites/depressionshroomframe2.png");
 		fileLocations.add("pics/sprites/depressionshroomframe2.png");
 		
-		Mob shroom = new Mob(world, fileLocations, null, 35, 15, 5, 5,  "Depressed Shroom");
+		Mob shroom = new Mob(world, fileLocations, null, 35, 15, 15, 5,  "Depressed Shroom");
 		world.addAtEmptyLocation(shroom, z);
 		new BigFungusAi(shroom, world);
 		return shroom; 	
@@ -108,7 +108,7 @@ public class MobFactory {
 		fileLocations.add("pics/sprites/slimewarriorframe1.png");
 		fileLocations.add("pics/sprites/slimewarriorframe2.png");
 		
-		Mob slime = new Mob(world, fileLocations, null, 100, 25, 20, 6,  "Slime Warrior");
+		Mob slime = new Mob(world, fileLocations, null, 100, 28, 18, 6,  "Slime Warrior");
 		world.addAtEmptyLocation(slime, z);
 		new SlimeAi(slime, world);
 		return slime; 	
@@ -119,7 +119,7 @@ public class MobFactory {
 		fileLocations.add("pics/sprites/skelesoldierframe1.png");
 		fileLocations.add("pics/sprites/skelesoldierframe2.png");
 		
-		Mob skele = new Mob(world, fileLocations, null, 30, 20, 5, 5,  "Skeleton Soldier");
+		Mob skele = new Mob(world, fileLocations, null, 30, 22, 9, 5,  "Skeleton Soldier");
 		world.addAtEmptyLocation(skele, z);
 		new SkeleAi(skele, world);
 		return skele; 	
@@ -133,7 +133,7 @@ public class MobFactory {
 		fileLocations.add("pics/sprites/necronomiconframe1-4.png");
 		fileLocations.add("pics/sprites/necronomiconframe5.png");
 		
-		Mob necro = new Mob(world, fileLocations, null, 75, 0, 20, 5,  "Necronomicon");
+		Mob necro = new Mob(world, fileLocations, null, 75, 0, 22, 5,  "Necronomicon");
 		world.addAtEmptyLocation(necro, z);
 		new NecroAi(necro, world, this);
 		return necro; 	

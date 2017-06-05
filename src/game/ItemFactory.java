@@ -79,7 +79,8 @@ public class ItemFactory {
 	
 	public Item newBow(int depth) {
 		Item bow = new Item("pics/items/Bow.png", "bow");
-		bow.modifyAttackValue(5);
+		bow.modifyAttackValue(3);
+		bow.modifyDefenseValue(2);
 		world.addAtEmptyLocation(bow, depth);
 		return bow;
 	}

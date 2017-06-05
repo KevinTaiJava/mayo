@@ -78,7 +78,7 @@ public class PlayScreen implements Screen {
 					mobFactory.newRedFungus(d);
 				}
 			}
-			for (int i = 1; i <= 6; i++) {
+			for (int i = 1; i <= 9; i++) {
 				if (d != 4) {
 					mobFactory.newGreenFungus(0);
 				}
@@ -101,12 +101,12 @@ public class PlayScreen implements Screen {
 			//bat
 			if (d <= 3) {
 				if (d == 0) {
-					for (int i = 1; i <= 28; i++) {
+					for (int i = 1; i <= 45; i++) {
 						mobFactory.newBat(d);
 					}
 				} else {
-					for (int i = 1; i <= 18; i++) {
-						mobFactory.newBat(0);
+					for (int i = 1; i <= 30; i++) {
+						mobFactory.newBat(d);
 					}
 				}
 			} 
@@ -148,7 +148,7 @@ public class PlayScreen implements Screen {
 			for (int i = 1; i <= 30; i++) {
 				itemFactory.newRock(d);
 			}
-			for (int i = 1; i <= 8; i++) {
+			for (int i = 1; i <= 6; i++) {
 				if (d > 2) {
 					itemFactory.newSword(d);
 					itemFactory.newSamuraiArmor(d);
@@ -167,7 +167,7 @@ public class PlayScreen implements Screen {
 					itemFactory.newSteelArmor(d);
 				}
 			}
-			for (int i = 1; i<= 10; i++) {
+			for (int i = 1; i<= 6; i++) {
 				if (d < 3) {
 					itemFactory.newDagger(d);
 					itemFactory.newBow(d);
@@ -295,23 +295,17 @@ public class PlayScreen implements Screen {
 		else {
 			switch (key.getKeyCode()){
 			case KeyEvent.VK_ESCAPE: return new StartScreen(app);
-			case KeyEvent.VK_LEFT:
-			case KeyEvent.VK_H: player.moveBy(-SCALE, 0, 0); break;
+			case KeyEvent.VK_LEFT: player.moveBy(-SCALE, 0, 0); break;
 			case KeyEvent.VK_RIGHT: player.moveBy(SCALE, 0, 0); break;
-			case KeyEvent.VK_UP:
-			case KeyEvent.VK_K: player.moveBy( 0,-SCALE, 0); break;
-			case KeyEvent.VK_DOWN:
-			case KeyEvent.VK_J: player.moveBy( 0, SCALE, 0); break;
-			case KeyEvent.VK_Y: player.moveBy(-SCALE,-SCALE, 0); break;
-			case KeyEvent.VK_U: player.moveBy( SCALE,-SCALE, 0); break;
-			case KeyEvent.VK_B: player.moveBy(-SCALE, SCALE, 0); break;
-			case KeyEvent.VK_N: player.moveBy( SCALE, SCALE, 0); break;
+			case KeyEvent.VK_UP: player.moveBy( 0,-SCALE, 0); break;
+			case KeyEvent.VK_DOWN: player.moveBy( 0, SCALE, 0); break;
 			}
 		
 			switch (key.getKeyChar()){
 			case 'd': subscreen = new DropScreen(player); break; 
 			case 'e': subscreen = new EatScreen(player); break;
 			case 'x': subscreen = new ExamineScreen(player); break;
+			case 'h': subscreen = new HelpScreen(); break;
 			case 'l': subscreen = new LookScreen(player, "Looking", player.x - getScrollX(), player.y - getScrollY()); break;
 			case 'g':
 	        case ',': player.pickup(); break;
