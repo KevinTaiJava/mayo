@@ -18,6 +18,8 @@ public class HelpScreen implements Screen {
 		g2d.drawString("[w] to wear or wield items", 50, 260);
 		g2d.drawString("[l] to look around", 50, 280);
 		g2d.drawString("[x] to examine your items", 50, 300);
+		g2d.drawString("[>] to go down when standing on ladder", 50, 320);
+		g2d.drawString("[<] to go up when standing on ladder", 50, 340);
 		
 	}
 
